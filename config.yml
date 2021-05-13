@@ -17,4 +17,4 @@ streams:
   #inlet_name: 'openvibeSignal' #ActiChamp
   inlet_name: 'Micromed' #ActiChamp
 #  inlet_name: 'dev_sEEG' #ActiChamp
-  outlet_namge: 'to_Unity'
+  outlet_name: 'to_Unity'
