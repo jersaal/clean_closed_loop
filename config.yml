@@ -1,0 +1,20 @@
+experiment:
+  numTrials: 20 #doesnt do anything yet
+  trialLen: 30 #seconds doesnt do anything yet
+  channel: 'T6'
+  freqRange: 2,8
+  largeWinSize: 10 #seconds, used for noise & bg modeling
+  filterWinSize: 3 #seconds, used for filtering. Longer than smollWin to prevent artifacts
+  smollWinSize: .25 #seconds, used to check for bursts, determines frequency of checking
+  threshWinSize: 1 #seconds, frequency to calculate bg signal
+  targetSR: 1024 #hz, will be downsampled to this
+  padLen: 4 #seconds, length to pad data for filtering
+  testMode: 1 #selects the firsst channel if identified channel is not found
+  numCyclesThresh: 2
+  powerThreshPercentile: .95
+  upperPercentileThresh: .98
+streams:
+  #inlet_name: 'openvibeSignal' #ActiChamp
+  inlet_name: 'Micromed' #ActiChamp
+#  inlet_name: 'dev_sEEG' #ActiChamp
+  outlet_name: 'to_Unity'
