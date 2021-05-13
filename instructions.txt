@@ -6,7 +6,7 @@ Hello!
 
 2nd, If you haven't already, start the LSL Seeg stream.
 
-3rd, Run decoder4.py from a command prompt
+3rd, Run decoder4.py
     When prompted, enter a patient identifier. Keep the identifier in mind. This will create a folder on C:/
     It will start collected baseline data for a total of two minutes. During this period, you can move on to the next step
     Keep an eye out for errors in the python window
@@ -15,14 +15,13 @@ Hello!
     IMPORTANT: Enter the same patient ID that you did you for the python file.
     First, instructions will be displayed. Try to make sure that patient understand them.
     You will not be able to move past the second instruction page until baseline data as been collected.
-        At this point a green '*' will towards the bottom-left of the screen, and you can press space to start the study
+        At this point a green '*' will appear at the top right of the screen, and you can press space to start the study
 
 5th, let the study run
     One the study has stopped running, it will prompt you to exit
+	If the patient is getting close to zero bursts, you can try reducing the difficutly on config.yml and reset the study. Try bringing it down by .3
 
 6th, Exit the decoder
     Keep "spamming" q until it quits. This could take a few tens of seconds.
 
 And that's it!!!! Thanks so much
-
-If you have any problems, such as the Unity game not getting input from the Python decoder, try restarting the computer
