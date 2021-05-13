@@ -237,7 +237,7 @@ class Decoder():
 
     #filter the data for the broad spectrum
     def full_filt_dat(self, dat, b):
-        print('full')
+        #print('full')
         toPad = int(fftpack.next_fast_len(int(self.padLen * self.sr)))
         padMe = np.zeros(toPad)
         dat = np.append(np.append(padMe, dat), padMe)
@@ -516,7 +516,7 @@ class Decoder():
                 ps.print_stats()
                 print(s.getvalue())
                 quit()
-            time.sleep(1)
+            time.sleep(10)
     #main function
     def run(self):
 
@@ -544,7 +544,7 @@ class Decoder():
         b, filter_f_starts, filter_f_stops = self.design_filters()
 
         # self.total_filt = np.zeros([10*self.sr, len(self.all_frex)])
-        # total_filt2 = np.zeros(10*self.sr)
+        total_filt2 = np.zeros(10*self.sr)
 
         if True:
             nyq = 0.5 * self.sr  # nyquist rate
@@ -837,16 +837,16 @@ class Decoder():
 
 
 
-            if False: # plot the power to make sure it's smoooooth
-                if history_full:
-                    curr_filt = dat4BurstCheck[:,0]  # perform TF analysis
-                    total_filt2[:-int(self.smollWinSize*self.sr)] = total_filt2[int(self.smollWinSize*self.sr):]
-                    total_filt2[-int(self.smollWinSize*self.sr):] = curr_filt
-                    plt.cla()
-                    plt.ylim([0, 35])
-                    plt.plot(total_filt2)
-                    plt.axhline(powthresh[0], c='r')
-                    plt.pause(.01)
+                if False: # plot the power to make sure it's smoooooth
+                    if history_full:
+                        curr_filt = dat4BurstCheck[:,0]  # perform TF analysis
+                        total_filt2[:-int(self.smollWinSize*self.sr)] = total_filt2[int(self.smollWinSize*self.sr):]
+                        total_filt2[-int(self.smollWinSize*self.sr):] = curr_filt
+                        plt.cla()
+                        plt.ylim([0, 35])
+                        plt.plot(total_filt2)
+                        plt.axhline(powthresh[0], c='r')
+                        plt.pause(.01)
 
 
                 if False:

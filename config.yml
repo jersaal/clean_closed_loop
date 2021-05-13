@@ -1,9 +1,9 @@
 experiment:
   numTrials: 20 #doesnt do anything yet
   trialLen: 30 #seconds doesnt do anything yet
-  channel: 'T6'
+  channel: 'LH0'
   freqRange: 2,8
-  largeWinSize: 10 #seconds, used for noise & bg modeling
+  largeWinSize: 60 #seconds, used for noise & bg modeling
   filterWinSize: 3 #seconds, used for filtering. Longer than smollWin to prevent artifacts
   smollWinSize: .25 #seconds, used to check for bursts, determines frequency of checking
   threshWinSize: 1 #seconds, frequency to calculate bg signal
@@ -11,7 +11,7 @@ experiment:
   padLen: 4 #seconds, length to pad data for filtering
   testMode: 1 #selects the firsst channel if identified channel is not found
   numCyclesThresh: 2
-  powerThreshPercentile: .95
+  powerThreshPercentile: .92
   upperPercentileThresh: .98
 streams:
   #inlet_name: 'openvibeSignal' #ActiChamp
