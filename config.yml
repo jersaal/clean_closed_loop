@@ -9,7 +9,7 @@ experiment:
   threshWinSize: 1 #seconds, frequency to calculate bg signal
   targetSR: 1024 #hz, will be downsampled to this
   padLen: 4 #seconds, length to pad data for filtering
-  testMode: 1 #selects the firsst channel if identified channel is not found
+  testMode: 0 #selects the firsst channel if identified channel is not found
   numCyclesThresh: 2
   powerThreshPercentile: .92
   upperPercentileThresh: .98
@@ -17,4 +17,4 @@ streams:
   #inlet_name: 'openvibeSignal' #ActiChamp
   inlet_name: 'Micromed' #ActiChamp
 #  inlet_name: 'dev_sEEG' #ActiChamp
-  outlet_name: 'to_Unity'
+  outlet_namge: 'to_Unity'
