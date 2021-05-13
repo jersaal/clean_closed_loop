@@ -11,7 +11,7 @@ experiment:
   padLen: 4 #seconds, length to pad data for filtering
   testMode: 0 #selects the firsst channel if identified channel is not found
   numCyclesThresh: 2
-  powerThreshPercentile: .92
+  powerThreshPercentile: .90
   upperPercentileThresh: .98
 streams:
   #inlet_name: 'openvibeSignal' #ActiChamp
