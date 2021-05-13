@@ -1,0 +1,20 @@
+Hello!
+
+1st, update the config.yml file. It's important to ensure that 'channel' and 'inlet name' are selected properly.
+    'Channel' is the label of the channel that will be used for closed loop. Distal hippocampal lead preferred
+    'inlet name' is the name of the LSL stream sending out sEEG data
+
+2nd, If you haven't already, start the LSL Seeg stream.
+
+3rd, Run decoder4.py
+    When prompted, enter a patient identifier. Keep the identifier in mind. This will create a folder on C:/
+    It will start collected baseline data for a total of two minutes. During this period, you can move on to the next step
+
+4th, run 'Linear' in the English_CL_Build folder. Choose the appropriate resolution, full screen, and 'fastest' as the settings
+    IMPORTANT: Enter the same patient ID that you did you for the python file.
+    First, instructions will be displayed. Try to make sure that patient understand them.
+    You will not be able to move past the second instruction page until baseline data as been collected.
+        At this point a green '*' will appear at the top right of the screen, and you can press space to start the study
+
+5th, let the study run
+    One the study has stopped running, it will prompt you to exit

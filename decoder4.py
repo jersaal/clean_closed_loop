@@ -9,17 +9,11 @@ from pylsl import StreamInlet, StreamOutlet, StreamInfo, resolve_stream
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.signal
-from mne.filter import filter_data
 from scipy.stats.distributions import chi2
 from scipy.signal import hilbert
 from scipy import fftpack
 from fooof import FOOOF
-# from fooof.fit import
 from scipy.signal import butter, filtfilt, lfilter, remez
-from neurodsp.filt import filter_signal
-from matplotlib.ticker import MultipleLocator
-import time
-from neurodsp.burst import detect_bursts_dual_threshold
 from neurodsp.filt import design_fir_filter
 from scipy.stats import zscore
 import yaml
