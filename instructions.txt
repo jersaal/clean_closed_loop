@@ -18,8 +18,9 @@ Hello!
         At this point a green '*' will appear at the top right of the screen, and you can press space to start the study
 
 5th, let the study run
-    One the study has stopped running, it will prompt you to exit
-	If the patient is getting close to zero bursts, you can try reducing the difficutly on config.yml and reset the study. Try bringing it down by .3
+    One the task finishes, it will let you know. Press space to exit the task.
+	If the patient is getting close to zero bursts, you can try reducing the 'powerThreshPercentile' in config.yml and reset the study. Try bringing it down by .2 or .3.
+    If they patient is constantly and overwhelmingly moving forward, try increasing the 'powerThreshPercentile' by .2 or .3
 
 6th, Exit the decoder
     Keep "spamming" q until it quits. This could take a few tens of seconds.
