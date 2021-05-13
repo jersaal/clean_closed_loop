@@ -221,7 +221,7 @@ class Decoder():
     #filter the data for selected frequencies
     def filt_dat(self, dat, b):
         #pat the data
-        print('smoll')
+        #print('smoll')
         toPad = int(fftpack.next_fast_len(int(self.padLen*self.sr)))
         dat = np.pad(dat, toPad, mode='constant')
         datFiltered = np.zeros([len(dat), len(self.selected_frex_idx)])
